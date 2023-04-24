@@ -4,7 +4,7 @@ import Heading from './Heading';
 
 const Logo = () => {
   return (
-    <div className="flex items-center gap-4 pt-6 px-4 bg-black">
+    <div className="flex items-center gap-4 px-4 bg-black">
       <div className="w-8 h-8 relative">
         <Image
           src={"/../public/images/sound-mixer.png"}
