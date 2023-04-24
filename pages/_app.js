@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { BioRhyme } from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import Title from "@/components/Head";
 config.autoAddCss = false;
 
 
@@ -15,7 +16,8 @@ const bioRhyme = BioRhyme({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`h-full w-full overflow-hidden ${bioRhyme.variable}`}>
+    <div className={`h-full w-full overflow-hidden text-primary-textColour ${bioRhyme.variable}`}>
+      <Title />
       <Component {...pageProps} />
     </div>
   )
