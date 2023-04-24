@@ -17,7 +17,7 @@ module.exports = {
         'bioRhyme': ['var(--font-bioRhyme)'],
       },
       colors: {
-        'primary-heading': '#f2e9e4',
+        'primary-textColour': '#f2e9e4',
         'primary-BG': '#22223b',
         'secondary-bg': '#f8f8f9',
         'text-blue': '#121FCF',
@@ -29,5 +29,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
