@@ -44,9 +44,19 @@ const addTrack = async (title, artist, album, genre, year) => {
 };
 
 // DELETE track (row)
-const deleteTrack = async (artist, title) => {
-  const query = "DELETE FROM music WHERE artist = ? AND title = ?";
-  await db.query(query, [artist, title]);
+const deleteTrack = async (trackId) => {
+  const query = "DELETE FROM music WHERE id = ?";
+  await db.query(query, [trackId]);
+};
+
+// UPDATE track
+const updateTrack = async (title, artist, album, genre, year, trackId) => {
+  const query = `
+  UPDATE music
+  SET title = ?, artist = ?, album = ?, genre = ?, year = ?
+  WHERE id = ?
+  `;
+  await db.query(query, [title, artist, album, genre, year, trackId]);
 };
 
 // Testing connection
@@ -65,4 +75,5 @@ module.exports = {
   addTrack,
   searchFunc,
   deleteTrack,
+  updateTrack
 };
