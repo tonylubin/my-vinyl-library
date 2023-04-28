@@ -1,7 +1,5 @@
 import React, { createContext, useState } from "react";
 import SideBar from "@/container/SideBar";
-import Heading2 from "./Logo";
-import Logo from "./Logo";
 import Header from "@/container/Header";
 
 export const SearchContext = createContext();
